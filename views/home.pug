@@ -1,0 +1,37 @@
+extends base.pug 
+block scripts
+  script(src='/static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content
+
+
+   section#introsection 
+     div.big Join Tournaments 
+     div.small At 0 Entery Fees
+
+   section#sponsers 
+     div.heading Feature Tournaments
+     .boxes
+       .boxes-items
+          img.img(src="https://www.megaidea.net/wp-content/uploads/2019/09/free-fire-1024x638.png", alt="Img cant load", srcset="")
+          h1 Squad barmuda 
+          p Tommarow 2PM Onwards And The First prize is Rs200/-
+          a.anchor(href="/P-details") join
+       .boxes-items
+          img.img(src="https://cdn141.picsart.com/273861435009211.png?r1024x1024", alt="img cant load", srcset="")
+          h1 Duo barmuda 
+          p Tommarow 2PM  Onwards And The First prize is Rs200/-
+          a.anchor(href="/P-details") join
+       .boxes-items 
+          img.img(src="http://cdn141.picsart.com/274715643034211.png", alt="img can't load")
+          h1 Solo barmuda 
+          p Tommarow 2PM Onwards And The First prize is Rs200/-
+          a.anchor(href="/P-details") join 
+
+            
+
+    

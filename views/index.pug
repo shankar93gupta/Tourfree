@@ -1,0 +1,26 @@
+//- index.pug
+doctype html
+html
+  head
+    style
+      include ../static/style.css
+  body
+    nav#navbar 
+        ul 
+            li #[a(href="/")  Home]
+            li #[a(href="/")  About] 
+            li #[a(href="/")  Services] 
+            li #[a(href="/")  Class info] 
+            li #[a(href="/")  Contact Us;]
+
+    section#introsection 
+     div.big Join Tournaments 
+     div.small At 0 Entery Fees
+
+    section#sponsers 
+     div Section for sponsers 
+
+    section#footer 
+     | our footer here
+    script
+      include ../static/index.js

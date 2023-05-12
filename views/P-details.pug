@@ -1,0 +1,17 @@
+extends base.pug
+block scripts
+  script(src='/static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/contact.css
+
+block content 
+  section#ragistration 
+    h1 Ragistar Your Freefire Account
+    form(action="/P-details" , method = "post") 
+      input(type="text", Class="Myinput", name="name", placeholder="Enter your Free fire name")
+      input(type="number", Class="Myinput", name="contact", placeholder="Free fire UID")
+      input(type="email", Class="Myinput", name="Email", placeholder="Enter your E-Mail")
+      <input class = "btn" type="submit" value="Submit" onclick="showSuccess()">
