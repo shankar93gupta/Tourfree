@@ -2,10 +2,14 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs")
+const serverless = require("serverless-http")
+const router = express.router();
 // const bodyparser = require("body-parser")
 // const mongoose = require('mongoose');
 // mongoose.connect('mongodb://127.0.0.1:27017/ContactDance', {useNewUrlParser: true});
 const port = process.env.PORT || 80;
+
+module.exports.handler = serverless('app')
 
 // const contactSchema = new mongoose.Schema({
 //     name: String,
@@ -18,6 +22,7 @@ const port = process.env.PORT || 80;
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
+app.use('/.netlify/function/app',router);
 
 // PUG SPECIFIC STUFF
 app.set('view engine', 'pug') // Set the template engine as pug
