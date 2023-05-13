@@ -46,6 +46,10 @@ app.get('/P-details', (req, res)=>{
     res.status(200).render('P-details.pug', params);
 })
 
+
+router.get('/index', (req,res)=>{
+    res.send("app is running")
+})
 // app.post('/contact', (req, res)=>{
 //     var myData = new contact(req.body);
 //     myData.save().then(()=>{
